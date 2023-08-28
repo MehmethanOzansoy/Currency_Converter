@@ -1,0 +1,61 @@
+#foo {
+  width: 200px;
+  height: 200px;
+  background: #444;
+  animation: corner 3s;
+  border-radius: 50%;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  margin: auto;
+}
+$s: 100% / 8;
+$t: 0.001%;
+
+@keyframes corner {
+  #{$s * 0} {
+    border-top-left-radius: 1% 50%;
+  }
+  #{$s * 1} {
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+  }
+  #{$s * 2} {
+    border-top-right-radius: 1% 50%;
+  }
+  #{$s * 2 + $t} {
+    border-top-right-radius: 50% 1%;
+  }
+  #{$s * 3} {
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+  }
+  #{$s * 4} {
+    border-bottom-right-radius: 50% 1%;
+  }
+  #{$s * 4 + $t} {
+    border-bottom-right-radius: 1% 50%;
+  }
+  #{$s * 5} {
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+  }
+  #{$s * 6} {
+    border-bottom-left-radius: 1% 50%;
+  }
+  #{$s * 6 + $t} {
+    border-bottom-left-radius: 50% 1%;
+  }
+  #{$s * 7} {
+    border-bottom-left-radius: 50%;
+    border-top-left-radius: 50%;
+  }
+  #{$s * 8} {
+    border-top-left-radius: 50% 1%;
+  }
+}

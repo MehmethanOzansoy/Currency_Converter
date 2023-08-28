@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="block">
+      <h2>Döviz Çevirici</h2>
+    </div>
+    <div class="box">
+      <div class="container my-5">
+        <div class="row justify-content-center">
+          <div class="col-md-8">
+            <div class="mb-3">
+              <input
+                type="text"
+                class="form-control"
+                name=""
+                id="currency_one"
+                list="list_one"
+                placeholder="Doviz Kuru"
+              />
+              <datalist id="list_one"></datalist>
+            </div>
+            <div class="mb-3">
+              <input
+                type="text"
+                class="form-control"
+                name=""
+                id="currency_two"
+                list="list_two"
+                placeholder="Doviz Kuru"
+              />
+              <datalist id="list_two"></datalist>
+            </div>
+
+            <div class="mb-3">
+              <input
+                type="number"
+                id="amount"
+                class="form-control"
+                placeholder="miktar"
+              />
+            </div>
+            <button class="btn btn-outline-primary w-100 mb-3" id="calculate">
+              Hesapla
+            </button>
+
+            <div class="result">
+              <!-- <div class="card border-primary">
+                          <div class="card-body text-center" style="font-size: 30px;">
+                              100 Dolar = 156165tl
+                          </div>
+                      </div> -->
+            </div>
+
+            <div class="input-group my-3 w-100" id="search_currency">
+              <span class="input-group-text" id="inputGroup-sizing-default"
+                >Para Birimi Arayın</span
+              >
+              <input
+                type="text"
+                id="search_value"
+                class="form-control"
+                placeholder="Please press enter for see the result"
+                aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-default"
+              />
+            </div>
+
+            <div class="specific_currency"></div>
+
+            <button
+              class="btn btn-success w-25 my-3 align-item-center hidden"
+              id="call_all"
+            >
+              Hepsini Çevir
+            </button>
+
+            <div class="all-currency"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
